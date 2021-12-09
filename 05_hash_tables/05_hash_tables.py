@@ -20,8 +20,6 @@ hash(c1)
 
 ''' A hash table is a data structure that allows you to store a collection of key-value pairs. '''
 
-import pprint
-
 class Hashtable:
     def __init__(self, elements):
         self.bucket_size = len(elements)
@@ -44,16 +42,14 @@ class Hashtable:
         return None
 
     def __str__(self):
-        return pprint.pformat(self.buckets) # here pformat is used to return a printable representation of the object
+        return str(self.buckets)
 
-
-if __name__ == "__main__":
-     capitals = [
-        ('France', 'Paris'),
-        ('United States', 'Washington D.C.'),
-        ('Italy', 'Rome'),
-        ('Canada', 'Ottawa')
-    ]
+capitals = [
+    ('France', 'Paris'),
+    ('United States', 'Washington D.C.'),
+    ('Italy', 'Rome'),
+    ('Canada', 'Ottawa')
+]
 
 hashtable = Hashtable(capitals)
 print(hashtable)
