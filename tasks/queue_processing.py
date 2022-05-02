@@ -20,7 +20,7 @@ def minTime(batchSize, processingTime, numTasks):
     return output
 
 # queue 0 can process a maximum of 4 tasks in 6 minutes
-# queue 1 can process a maximum of 3 tasks in 5 minutes 
+# queue 1 can process a maximum of 3 tasks in 5 minutes
 # each queue has 8 tasks
 batchSize = [4, 3]
 processingTime = [6, 5]
