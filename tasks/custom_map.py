@@ -11,12 +11,24 @@ def cmap(funcs, arr):
         arr = output
         yield output # generator required
 
+
+# funcs = [lambda x: x*x, lambda x: x+x]
+# arr = [1, 2, 3, 4]
+
+# result = cmap(funcs, arr)
+# for result_item in result:
+#     print(result_item)
+
+
 # test
-funcs = [lambda x: x*x, lambda x: x+x]
-arr = [1, 2, 3, 4]
+test = {
+    'input': {
+        'array': [1, 2, 3, 4],
+        'funcs': [lambda x: x*x, lambda x: x+x]
+    },
+    'output': [[1, 4, 9, 16], [2, 8, 18, 32]]
+}
 
-result = cmap(funcs, arr)
-for result_item in result:
-    print(result_item)
-
-assert(isinstance(result, types.GeneratorType))
+assert(isinstance(cmap(test['input']['funcs'], test['input']['array']), types.GeneratorType)) == True
+next(cmap(test['input']['funcs'], test['input']['array'])) == test['output'][0]
+next(cmap(test['input']['funcs'], test['input']['array'])) == test['output'][1]

@@ -16,9 +16,13 @@ recursive("Hello world", 0)
 
 
 def factorial(n):
+    '''
+    n! = product of all positive integers <= n (e.g. 5! = 5*4*3*2*1 = 120)
+    '''
     if n == 0:
         return 1
     else:
         return n * factorial(n - 1)
 
-factorial(4)
+# n!
+factorial(5)
