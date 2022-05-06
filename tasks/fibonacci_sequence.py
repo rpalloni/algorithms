@@ -24,7 +24,7 @@ def fibonacci_iter(n):
         return [0]
     # initialize seq
     arr = [0, 1]
-    for i in range(2, n):
+    for _ in range(2, n):
         arr.append(arr[-1]+arr[-2])
     return arr
 
