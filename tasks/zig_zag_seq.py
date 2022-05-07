@@ -5,7 +5,7 @@
 
 def find_zig_zag(a, n):
     a.sort()
-    mid = int(n / 2)
+    mid = n // 2
     a[mid], a[n-1] = a[n-1], a[mid]
 
     st = mid + 1
