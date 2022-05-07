@@ -23,6 +23,7 @@ def bubble_sort(array):
                 # As long as sorting happens, 'all_sorted' is set to False
                 # so the algorithm doesn't stop
                 all_sorted = False
+        print(array)
 
         # If there were no swaps during the last iteration,
         # the array is already sorted, and algorithm can terminate
@@ -32,6 +33,7 @@ def bubble_sort(array):
     return array
 
 a = [8, 2, 6, 5, 4]
+[*range(len(a))]
 
 start_time = time.time()
 bubble_sort(a)
