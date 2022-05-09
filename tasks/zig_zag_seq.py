@@ -3,8 +3,8 @@
 # if the first k elements in the sequence are in increasing order and the last k elements
 #  are in decreasing order, where k = (n + 1)/2
 
-def find_zig_zag(a, n):
-    a.sort()
+def find_zig_zag(arr, n):
+    a = sorted(arr)
     mid = n // 2
     a[mid], a[n-1] = a[n-1], a[mid]
 
