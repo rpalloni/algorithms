@@ -27,3 +27,10 @@ t_string = '()[]{}'
 
 is_valid(f_string)
 is_valid(t_string)
+
+# note
+left = []
+not left
+
+left = [1, 2]
+not left
