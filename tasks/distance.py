@@ -1,4 +1,5 @@
-'''calculate distance between two points (not orthogonal)'''
+''' Given two points in a bidimensional plane, calculate the distance between
+them considering only orthogonal moves (no Euclidean) '''
 
 def distance_points(p1, p2):
     s1 = abs(p2[0] - p1[0])
@@ -25,10 +26,10 @@ distance_points(test['input']['p1'], test['input']['p2']) == test['output']
 
 test1 = {
     'input': {
-        'p1': [1, 1],
+        'p1': [-1, -1],
         'p2': [2, 2]
     },
-    'output': 2
+    'output': 6
 }
 
 distance_points(test1['input']['p1'], test1['input']['p2']) == test1['output']
