@@ -21,6 +21,8 @@ Test scenario:
     ◦ Time 5: pickup: 1,3, delivery: 3,3
 '''
 
+from datetime import datetime
+
 class Courier:
 
     def __init__(self, code, position_point, velocity, idle=True):
@@ -35,6 +37,8 @@ class Order:
         self.code = code
         self.pickup_point = pickup_point
         self.delivery_point = delivery_point
+        self.pickup_time = None
+        self.delivery_time = None
 
 
 def distance(courier, order):
@@ -68,12 +72,14 @@ def assign_order(couriers, order):
             if courier.code == closer:
                 # courier.idle = False
                 courier.position_point = order.delivery_point # assign new position to courier
-        print(f'Order {order.code} assigned to courier {closer}')
+                order.pickup_time = datetime.now()
+        print(f'Order {order.code} assigned to courier {closer} at {order.pickup_time}')
         return
     print('<<< no order >>>')
 
 def deliver_order(couriers, order):
-    #  order assigned timestamp + delivery time (d=delivery-pickup) / velocity = order delivered timestamp => idle True
+    # delivery_time = abs(delivery_point-pickup_point) / velocity
+    # order.pickup_time + delivery_time = order.delivery_time => idle True
     pass
 
 
